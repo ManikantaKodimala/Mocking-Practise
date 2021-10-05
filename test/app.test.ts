@@ -3,14 +3,8 @@ import axios, { AxiosResponse } from "axios";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
-const mockedResponse: AxiosResponse = {
-  data: {
-    name: "Henry",
-  },
-  status: 200,
-  statusText: "OK",
-  headers: {},
-  config: {},
+const mockedResponse = {
+  data: {},
 };
 describe("testing the status of api call", () => {
   test("if status is success it return true", async () => {
